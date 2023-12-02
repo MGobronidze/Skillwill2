@@ -62,9 +62,28 @@ console.log(user1)
 
 // დავალება 3
 // კამათლის გაგორება 3 -მდე
-let userA;
-let userB;
+let userA = Math.floor(Math.random()*6+1);
+let userB = Math.floor(Math.random()*6+1); 
+let iteration = 1;
 
+while(true){
+    if(userA === 3 || userB === 3){
+
+        if(userA === 3 && userB === 3){
+            console.log("Draw")
+        } else if(userA === 3){
+            console.log("Winner is player A") 
+        }else{
+            console.log("Winner is player B")
+        }
+        console.log(`iteration = ${iteration}`)
+        break;
+    } else {
+        userA = Math.floor(Math.random()*6+1);
+        userB = Math.floor(Math.random()*6+1);
+        iteration+=1
+    }  
+}
 
 
 
